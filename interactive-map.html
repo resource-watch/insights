@@ -1,128 +1,135 @@
-<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Lato:400,300,700">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" media="all" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css">
-<link rel="stylesheet" href="https://vizzuality.github.io/WRW-Prototype/styles/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-<style>
-  body {display: block;}
-  .story--breadcrumbs li a {
-    color: #3bb2d0;
-  }
-  /* Custom styles for input range */
-  input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Farms to feel squeeze as competition for water increases</title>
+  <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Lato:400,300,700">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="all" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css">
+  <link rel="stylesheet" href="https://vizzuality.github.io/WRW-Prototype/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+  <style>
+    body {display: block;}
+    .story--breadcrumbs li a {
+      color: #3bb2d0;
+    }
+    /* Custom styles for input range */
+    input[type=range] {
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
 
-    display: flex;
-    width: calc(100% - 25px);
+      display: flex;
+      width: calc(100% - 25px);
 
-    margin: 25px auto 0;
-  }
+      margin: 25px auto 0;
+    }
 
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
 
-  input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  }
+    input[type=range]:focus {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
 
-  input[type=range]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-    background: transparent; /* Hides the slider so custom styles can be added */
-    border-color: transparent;
-    color: transparent;
-  }
+    input[type=range]::-ms-track {
+      width: 100%;
+      cursor: pointer;
+      background: transparent; /* Hides the slider so custom styles can be added */
+      border-color: transparent;
+      color: transparent;
+    }
 
-  input[type=range]::-webkit-slider-runnable-track {
-    position: relative;
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    background: #c32d7b;
-    border-radius: 4px;
-  }
+    input[type=range]::-webkit-slider-runnable-track {
+      position: relative;
+      width: 100%;
+      height: 4px;
+      cursor: pointer;
+      background: #c32d7b;
+      border-radius: 4px;
+    }
 
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #c32d7b;
-  }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #c32d7b;
+    }
 
-  input[type=range]::-moz-range-track {
-    position: relative;
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    background: #c32d7b;
-    border-radius: 4px;
-  }
+    input[type=range]::-moz-range-track {
+      position: relative;
+      width: 100%;
+      height: 4px;
+      cursor: pointer;
+      background: #c32d7b;
+      border-radius: 4px;
+    }
 
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    border-width: 16px 0;
-    color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #2a6495;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #3071a9;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #367ebd;
-  }
+    input[type=range]::-ms-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+      background: #2a6495;
+      border: 0.2px solid #010101;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+      background: #3071a9;
+    }
+    input[type=range]::-ms-fill-upper {
+      background: #3071a9;
+      border: 0.2px solid #010101;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+      background: #367ebd;
+    }
 
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
 
-    position: absolute;
-    top: 1px;
-
-
-    width: 18px;
-    height: 18px;
-
-    background: #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+      position: absolute;
+      top: 1px;
 
 
-    transform: translate(0,-50%);
+      width: 18px;
+      height: 18px;
 
-    cursor: grab;
-  }
-
-  input[type=range]::-moz-range-thumb {
-    position: absolute;
-    top: 1px;
+      background: #fff;
+      border-radius: 100%;
+      box-shadow: 0 1px 4px rgba(0,0,0,.3);
 
 
-    width: 18px;
-    height: 18px;
+      transform: translate(0,-50%);
 
-    background: #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+      cursor: grab;
+    }
+
+    input[type=range]::-moz-range-thumb {
+      position: absolute;
+      top: 1px;
 
 
-    transform: translate(0,0);
+      width: 18px;
+      height: 18px;
 
-    cursor: grab;
-  }
+      background: #fff;
+      border-radius: 100%;
+      box-shadow: 0 1px 4px rgba(0,0,0,.3);
 
-</style>
+
+      transform: translate(0,0);
+
+      cursor: grab;
+    }
+
+  </style>
+</head>
+<body>
 
 <div class="is-default">
 
@@ -171,7 +178,7 @@
     <!-- Content -->
     <div id="content" class="insights--interactive-map">
       <div id="js-map" class="insights--interactive-map-container"></div>
-      <ul class="story--breadcrumbs insights--interactive--breacrumbs"><li><a href="/">Home</a><li><a href="insights.html">&nbsp;Insights</a></li><li>&nbsp;Interactive</li></ul>
+
       <div class="insights--interactive-scenario-legend">
         <h2>Farms to feel squeeze as competition for water increases</h2>
         <p>Farmers are facing increasing competition for water from the growth of cities and industrialization, and are likely to see big changes in rainfall because of climate change. This map shows the world’s irrigated farmland, color-coded by the rate at which water stress, a measure of competition for water, is likely to change. In total, 35 percent of irrigated farmland is likely to see substantial increases in water stress by 2040.</p>
@@ -394,3 +401,5 @@
   new InteractiveMap();
 
 </script>
+</body>
+</html>

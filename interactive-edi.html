@@ -1,27 +1,32 @@
-<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Lato:400,300,700">
-<link rel="stylesheet" media="all" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css">
-<link rel="stylesheet" href="https://vizzuality.github.io/WRW-Prototype/styles/main.css">
-
-<style>
-  body {display: block;}
-  .container:after, .container:before {
-    display: table;
-    content: '';
-  }
-  .container:after {
-    clear:  both;
-  }
-  .insights--interactive-input select {
-    padding: 10px;
-    height: auto;
-    background: none;
-  }
-  .insights--interactive-data-list li:nth-child(2n) {
-    margin-top: 30px;
-  }
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A factory is being built in your neighborhood</title>
+  <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Lato:400,300,700">
+  <link rel="stylesheet" media="all" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css">
+  <link rel="stylesheet" href="https://vizzuality.github.io/WRW-Prototype/styles/main.css">
+  <style>
+    body {display: block;}
+    .container:after, .container:before {
+      display: table;
+      content: '';
+    }
+    .container:after {
+      clear:  both;
+    }
+    .insights--interactive-input select {
+      padding: 10px;
+      height: auto;
+      background: none;
+    }
+    .insights--interactive-data-list li:nth-child(2n) {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
 <svg style="display:none" class="is-hidden">
   <!-- Star-->
   <symbol id="icon-star" viewBox="0 0 1092 1024">
@@ -66,15 +71,7 @@
 
 <!-- Content -->
 <div id="content" class="insights--interactive-edi-bg">
-  <div class="container">
-    <div class="breadcrumbs">
-      <a class="" href="/">Home</a>
-      >
-      <a class="" href="/insights">Insights</a>
-      >
-      <span class="current">Interactive</span>
-    </div>
-  </div>
+
   <div class="container">
     <h1 class="insights--interactive-title">A factory is being built in your neighborhood. Can you do anything about it?</h1>
     <h3 class="insights--interactive-subtitle">Issues of environmental justice happen more frequently than we would like to think.</h3>
@@ -96,18 +93,18 @@
         <div class="insights--interactive-card-back is-hidden">
           <div class="insights--interactive-intro-2-title">It’s your turn</div>
           <div class="insights--interactive-intro-2-subtitle">If a potentially damaging development were proposed in your neighborhood, would you be able to be able to do anything about it? The outcome of such proposals often depends on the strength of <b><a target="_blank" href="http://www.wri.org/blog/2015/05/environmental-democracy-essential-right-21st-century">national laws</a></b>.</div>
-          <div
-          class="insights--interactive-input">
-          <form>
-            <select class="js-search-country">
-              <option value="" disabled="" selected="">Where do you live?</option>
-            </select>
-            <input type="submit" value="Let’s go!" class="button js-next">
-          </form>
+          <div class="insights--interactive-input">
+            <form>
+              <select class="js-search-country">
+                <option value="" disabled="" selected="">Where do you live?</option>
+              </select>
+              <input type="submit" value="Let’s go!" class="button js-next">
+            </form>
+          </div>
+          <ul class="insights--interactive-footer">
+            <li><a href="http://environmentaldemocracyindex.org" target="_blank">Visit EDI</a></li>
+          </ul>
         </div>
-        <ul class="insights--interactive-footer">
-          <li><a href="http://environmentaldemocracyindex.org" target="_blank">Visit EDI</a></li>
-        </ul>
       </div>
     </div>
   </div>
@@ -1174,3 +1171,5 @@
 
   new InteractiveEdi();
 </script>
+</body>
+</html>
