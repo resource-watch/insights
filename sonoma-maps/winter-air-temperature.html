@@ -312,7 +312,7 @@
       }
 
       function setBounds() {
-        var query  = 'SELECT ST_AsGeoJSON(ST_Envelope(ST_Union(ST_Transform(ST_Envelope(the_raster_webmercator), 4326)))) as bbox FROM '+ cartodbtable +' as t';
+        var query  = 'SELECT ST_AsGeoJSON(ST_Envelope(the_geom), 4326) as bbox FROM sonoma_plus_rr';
         return $.get('https://prep-admin.cartodb.com/api/v2/sql/?q='+query);
       }
 
@@ -322,8 +322,8 @@
             'user_name': 'prep-admin',
             'type': 'cartodb',
             'options': {
-                'sql': 'SELECT * FROM \"prep-admin\".rrcounties',
-                'cartocss': '#rrcounties{polygon-fill:transparent;line-color: #cccac9;line-width: 1;line-opacity: 0.8;} #ci08au12::labels {text-name: [name];text-face-name: \'Lato Regular\';text-size: 10;text-label-position-tolerance: 10;text-fill: #a3a1a0;text-halo-fill: #FFF;text-halo-radius: 0.2;text-dy: -10;text-allow-overlap: false;text-placement: point;text-placement-type: simple;}',
+                'sql': 'SELECT * FROM rr_huc',
+                'cartocss': '#rr_huc{polygon-fill:transparent;polygon-opacity: 0.7;line-color: #5CA2D1;line-width: 1.5;line-opacity: 1;}#rr_huc::labels {text-name: [huc_name];text-face-name: \'DejaVu Sans Book\';text-size: 10;text-label-position-tolerance: 10;text-fill: #727171;text-halo-fill: #FFF;text-halo-radius: 1;text-dy: -10;text-allow-overlap: true;text-placement: point;text-placement-type: simple;}',
               'cartocss_version': '2.3.0',
             }
           }]
