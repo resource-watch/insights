@@ -336,7 +336,7 @@
         this.infowindow.remove();
       }
 
-      cartodb.createLayer(this.map, this.getStressScenario(this.yearSelection, this.scenario)).done(_.bind(function(layer) {
+      cartodb.createLayer(this.map, this.getStressScenario(this.yearSelection, this.scenario), { https: true }).done(_.bind(function(layer) {
         this.layer = layer;
         this.map.addLayer(layer);
       }, this));
