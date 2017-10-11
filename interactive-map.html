@@ -341,7 +341,7 @@
         this.map.addLayer(layer);
       }, this));
 
-      cartodb.createLayer(this.map, this.countryLayer).addTo(this.map).done(_.bind(function(layer) {
+      cartodb.createLayer(this.map, this.countryLayer, { https: true }).addTo(this.map).done(_.bind(function(layer) {
         this.infowindowLayer = layer;
         var subLayer = layer.getSubLayer(0);
         this.infowindow = cartodb.vis.Vis.addInfowindow(this.map, subLayer, this.countryLayer.sublayers[0].interactivity, {
